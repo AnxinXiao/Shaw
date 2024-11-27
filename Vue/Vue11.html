@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.18" />
+    <meta name="theme" content="VuePress Theme Hope 2.0.0-rc.59" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
+
+      [data-theme="dark"] {
+        --vp-c-bg: #1b1b1f;
+      }
+
+      html,
+      body {
+        background: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem("vuepress-theme-hope-scheme");
+      const systemDarkMode =
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      if (userMode === "dark" || (userMode !== "light" && systemDarkMode)) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    </script>
+    <link rel="icon" href="https://photos-bzi.pages.dev/hero.ico"><title>侦听器</title><meta name="description" content="Shaw的前端学习笔记">
+    <link rel="preload" href="/assets/style-vcN6yiNg.css" as="style"><link rel="stylesheet" href="/assets/style-vcN6yiNg.css">
+    <link rel="modulepreload" href="/assets/app-_9vaDOHR.js"><link rel="modulepreload" href="/assets/Vue11.html-B9dsTimn.js"><link rel="modulepreload" href="/assets/plugin-vue_export-helper-DlAUqK2U.js">
+    <link rel="prefetch" href="/assets/index.html-COf60AiV.js" as="script"><link rel="prefetch" href="/assets/JavaScript01.html-CIXBcYKm.js" as="script"><link rel="prefetch" href="/assets/JavaScript02.html-BP-xVH5g.js" as="script"><link rel="prefetch" href="/assets/JavaScript03.html-Mt3Nb4iF.js" as="script"><link rel="prefetch" href="/assets/JavaScript04.html-DUFVyX6b.js" as="script"><link rel="prefetch" href="/assets/JavaScript05.html-CV_CaGPz.js" as="script"><link rel="prefetch" href="/assets/JavaScript06.html-C2XQqQ8j.js" as="script"><link rel="prefetch" href="/assets/React01.html-CXLkgYC3.js" as="script"><link rel="prefetch" href="/assets/React02.html-u2L86zDx.js" as="script"><link rel="prefetch" href="/assets/Vue01.html-B_dwuGaC.js" as="script"><link rel="prefetch" href="/assets/Vue02.html-DNzvUB6x.js" as="script"><link rel="prefetch" href="/assets/Vue03.html-BITaxSqx.js" as="script"><link rel="prefetch" href="/assets/Vue04.html-DIFV09DR.js" as="script"><link rel="prefetch" href="/assets/Vue05.html-CtVgtIMu.js" as="script"><link rel="prefetch" href="/assets/Vue06.html-rj_xrTX2.js" as="script"><link rel="prefetch" href="/assets/Vue07.html-CNumPrif.js" as="script"><link rel="prefetch" href="/assets/Vue08.html-DjRBfriK.js" as="script"><link rel="prefetch" href="/assets/Vue09.html-B3ZGmOE6.js" as="script"><link rel="prefetch" href="/assets/Vue10.html-CHHypWY1.js" as="script"><link rel="prefetch" href="/assets/Vue12.html-BNAPpLYF.js" as="script"><link rel="prefetch" href="/assets/Vue13.html-n_Tgbf9v.js" as="script"><link rel="prefetch" href="/assets/Vue14.html-CAveCn9j.js" as="script"><link rel="prefetch" href="/assets/Vue15.html-D8LmEQc7.js" as="script"><link rel="prefetch" href="/assets/Vue16.html-vZ2bKZGa.js" as="script"><link rel="prefetch" href="/assets/Vue17.html-ntTsqHAf.js" as="script"><link rel="prefetch" href="/assets/Vue18.html-TTZ8W-3N.js" as="script"><link rel="prefetch" href="/assets/Vue19.html-U9rq4IOj.js" as="script"><link rel="prefetch" href="/assets/Vue20.html-CrUHOxaG.js" as="script"><link rel="prefetch" href="/assets/Vue21.html-8tuuMoPE.js" as="script"><link rel="prefetch" href="/assets/Vue22.html-B5EooNmq.js" as="script"><link rel="prefetch" href="/assets/Vue23.html-CqhidApD.js" as="script"><link rel="prefetch" href="/assets/Vue24.html-PVgg5qMr.js" as="script"><link rel="prefetch" href="/assets/Vue25.html-DYawqQW1.js" as="script"><link rel="prefetch" href="/assets/Vue26.html-D7utLlg4.js" as="script"><link rel="prefetch" href="/assets/Vue27.html-CIDfASBW.js" as="script"><link rel="prefetch" href="/assets/Vue28.html-DP-ipo4E.js" as="script"><link rel="prefetch" href="/assets/Vue29.html-D9bsHqZ_.js" as="script"><link rel="prefetch" href="/assets/Vue30.html-CaH_avZx.js" as="script"><link rel="prefetch" href="/assets/Vue31.html-BdlABIfz.js" as="script"><link rel="prefetch" href="/assets/Vue32.html-Cwx0vRmB.js" as="script"><link rel="prefetch" href="/assets/Vue33.html-BMWW3SP-.js" as="script"><link rel="prefetch" href="/assets/Vue34.html-D7zicpk3.js" as="script"><link rel="prefetch" href="/assets/Vue35.html-CiotdcM_.js" as="script"><link rel="prefetch" href="/assets/Vue36.html-BPVQDS4f.js" as="script"><link rel="prefetch" href="/assets/Vue37.html-Bc7J6IR7.js" as="script"><link rel="prefetch" href="/assets/Vue38.html-DjuUDr7A.js" as="script"><link rel="prefetch" href="/assets/Vue39.html-DLJax5tw.js" as="script"><link rel="prefetch" href="/assets/Vue40.html-C6fmIAAP.js" as="script"><link rel="prefetch" href="/assets/Vue41.html-Db483XEB.js" as="script"><link rel="prefetch" href="/assets/Vue42.html-DIxdCeeU.js" as="script"><link rel="prefetch" href="/assets/CSS01.html-h6d0LONr.js" as="script"><link rel="prefetch" href="/assets/CSS02.html-D0b2nVG1.js" as="script"><link rel="prefetch" href="/assets/CSS03.html-Dm0L6zBW.js" as="script"><link rel="prefetch" href="/assets/CSS04.html-DiKTlSEX.js" as="script"><link rel="prefetch" href="/assets/CSS05.html-Bhb-L84J.js" as="script"><link rel="prefetch" href="/assets/HTML01.html-C2t2-Bvb.js" as="script"><link rel="prefetch" href="/assets/HTML02.html-P0M85WHG.js" as="script"><link rel="prefetch" href="/assets/HTML03.html-BmWd2gqb.js" as="script"><link rel="prefetch" href="/assets/HTML04.html-C5vOKyva.js" as="script"><link rel="prefetch" href="/assets/HTML05.html-B9VPUPF4.js" as="script"><link rel="prefetch" href="/assets/404.html-BzHNzZkc.js" as="script"><link rel="prefetch" href="/assets/index.html-sA9rtWks.js" as="script"><link rel="prefetch" href="/assets/index.html-Cwupn4BY.js" as="script"><link rel="prefetch" href="/assets/index.html-BDJ6efng.js" as="script"><link rel="prefetch" href="/assets/index.html-n_tOVlbU.js" as="script"><link rel="prefetch" href="/assets/index.html-ODw8sqFl.js" as="script"><link rel="prefetch" href="/assets/index.html-Bu0kw_Nx.js" as="script"><link rel="prefetch" href="/assets/photoswipe.esm-GXRgw7eJ.js" as="script"><link rel="prefetch" href="/assets/setupDevtools-7MC2TMWH-Bds6mtOL.js" as="script">
+  </head>
+  <body>
+    <div id="app"><!--[--><!--[--><!--[--><span tabindex="-1"></span><a href="#main-content" class="vp-skip-link sr-only">跳至主要內容</a><!--]--><!--[--><div class="theme-container external-link-icon has-toc" vp-container><!--[--><header id="navbar" class="vp-navbar" vp-navbar><div class="vp-navbar-start"><button type="button" class="vp-toggle-sidebar-button" title="Toggle Sidebar"><span class="icon"></span></button><!----><!--[--><a class="route-link vp-brand" href="/" aria-label="带我回家"><img class="vp-nav-logo" src="https://anxinshaw.us.kg/hero.png" alt><!----><!----></a><!--]--><!----></div><div class="vp-navbar-center"><!----><!--[--><nav class="vp-nav-links"><div class="vp-nav-item hide-in-mobile"><a class="route-link auto-link" href="/" aria-label="首页"><!---->首页<!----></a></div><div class="vp-nav-item hide-in-mobile"><a class="route-link auto-link" href="/HTML_CSS/HTML/HTML01.html" aria-label="HTML&amp;CSS"><!---->HTML&amp;CSS<!----></a></div><div class="vp-nav-item hide-in-mobile"><a class="route-link auto-link" href="/JavaScript/JavaScript01.html" aria-label="JavaScript"><!---->JavaScript<!----></a></div><div class="vp-nav-item hide-in-mobile"><a class="route-link auto-link" href="/Vue.html" aria-label="Vue"><!---->Vue<!----></a></div><div class="vp-nav-item hide-in-mobile"><a class="route-link auto-link" href="/React.html" aria-label="React"><!---->React<!----></a></div><div class="vp-nav-item hide-in-mobile"><div class="vp-dropdown-wrapper"><button type="button" class="vp-dropdown-title" aria-label="更多"><!--[--><!---->更多<!--]--><span class="arrow"></span><ul class="vp-dropdown"><li class="vp-dropdown-item"><a class="auto-link external-link" href="https://github.com/AnxinXiao?tab=repositories" aria-label="Git" rel="noopener noreferrer" target="_blank"><!---->Git<!----></a></li><li class="vp-dropdown-item"><a class="auto-link external-link" href="https://gitlab.com/your-username" aria-label="Database" rel="noopener noreferrer" target="_blank"><!---->Database<!----></a></li><li class="vp-dropdown-item"><a class="auto-link external-link" href="https://gitee.com/your-username" aria-label="Docker" rel="noopener noreferrer" target="_blank"><!---->Docker<!----></a></li></ul></button></div></div></nav><!--]--><!----></div><div class="vp-navbar-end"><!----><!--[--><!----><div class="vp-nav-item vp-action"><a class="vp-action-link" href="https://github.com/AnxinXiao?tab=repositories/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" class="icon github-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="github icon" name="github" style="width:1.25rem;height:1.25rem;vertical-align:middle;"><path d="M511.957 21.333C241.024 21.333 21.333 240.981 21.333 512c0 216.832 140.544 400.725 335.574 465.664 24.49 4.395 32.256-10.07 32.256-23.083 0-11.69.256-44.245 0-85.205-136.448 29.61-164.736-64.64-164.736-64.64-22.315-56.704-54.4-71.765-54.4-71.765-44.587-30.464 3.285-29.824 3.285-29.824 49.195 3.413 75.179 50.517 75.179 50.517 43.776 75.008 114.816 53.333 142.762 40.79 4.523-31.66 17.152-53.377 31.19-65.537-108.971-12.458-223.488-54.485-223.488-242.602 0-53.547 19.114-97.323 50.517-131.67-5.035-12.33-21.93-62.293 4.779-129.834 0 0 41.258-13.184 134.912 50.346a469.803 469.803 0 0 1 122.88-16.554c41.642.213 83.626 5.632 122.88 16.554 93.653-63.488 134.784-50.346 134.784-50.346 26.752 67.541 9.898 117.504 4.864 129.834 31.402 34.347 50.474 78.123 50.474 131.67 0 188.586-114.73 230.016-224.042 242.09 17.578 15.232 33.578 44.672 33.578 90.454v135.85c0 13.142 7.936 27.606 32.854 22.87C862.25 912.597 1002.667 728.747 1002.667 512c0-271.019-219.648-490.667-490.71-490.667z"></path></svg></a></div><div class="vp-nav-item hide-in-mobile"><button type="button" class="vp-color-mode-switch" id="color-mode-switch"><svg xmlns="http://www.w3.org/2000/svg" class="icon auto-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="auto icon" name="auto" style="display:block;"><path d="M512 992C246.92 992 32 777.08 32 512S246.92 32 512 32s480 214.92 480 480-214.92 480-480 480zm0-840c-198.78 0-360 161.22-360 360 0 198.84 161.22 360 360 360s360-161.16 360-360c0-198.78-161.22-360-360-360zm0 660V212c165.72 0 300 134.34 300 300 0 165.72-134.28 300-300 300z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon dark-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="dark icon" name="dark" style="display:none;"><path d="M524.8 938.667h-4.267a439.893 439.893 0 0 1-313.173-134.4 446.293 446.293 0 0 1-11.093-597.334A432.213 432.213 0 0 1 366.933 90.027a42.667 42.667 0 0 1 45.227 9.386 42.667 42.667 0 0 1 10.24 42.667 358.4 358.4 0 0 0 82.773 375.893 361.387 361.387 0 0 0 376.747 82.774 42.667 42.667 0 0 1 54.187 55.04 433.493 433.493 0 0 1-99.84 154.88 438.613 438.613 0 0 1-311.467 128z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon light-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="light icon" name="light" style="display:none;"><path d="M952 552h-80a40 40 0 0 1 0-80h80a40 40 0 0 1 0 80zM801.88 280.08a41 41 0 0 1-57.96-57.96l57.96-58a41.04 41.04 0 0 1 58 58l-58 57.96zM512 752a240 240 0 1 1 0-480 240 240 0 0 1 0 480zm0-560a40 40 0 0 1-40-40V72a40 40 0 0 1 80 0v80a40 40 0 0 1-40 40zm-289.88 88.08-58-57.96a41.04 41.04 0 0 1 58-58l57.96 58a41 41 0 0 1-57.96 57.96zM192 512a40 40 0 0 1-40 40H72a40 40 0 0 1 0-80h80a40 40 0 0 1 40 40zm30.12 231.92a41 41 0 0 1 57.96 57.96l-57.96 58a41.04 41.04 0 0 1-58-58l58-57.96zM512 832a40 40 0 0 1 40 40v80a40 40 0 0 1-80 0v-80a40 40 0 0 1 40-40zm289.88-88.08 58 57.96a41.04 41.04 0 0 1-58 58l-57.96-58a41 41 0 0 1 57.96-57.96z"></path></svg></button></div><!----><!--]--><!----><button type="button" class="vp-toggle-navbar-button" aria-label="Toggle Navbar" aria-expanded="false" aria-controls="nav-screen"><span><span class="vp-top"></span><span class="vp-middle"></span><span class="vp-bottom"></span></span></button></div></header><!----><!--]--><!----><div class="toggle-sidebar-wrapper"><span class="arrow start"></span></div><aside id="sidebar" class="vp-sidebar" vp-sidebar><!----><ul class="vp-sidebar-links"><li><section class="vp-sidebar-group"><p class="vp-sidebar-header clickable"><!----><a class="route-link auto-link vp-sidebar-title no-external-link-icon" href="/" aria-label="欢迎学习"><!---->欢迎学习<!----></a><!----></p><ul class="vp-sidebar-links"><li><a class="route-link auto-link vp-sidebar-link" href="/" aria-label="学前导读"><!---->学前导读<!----></a></li></ul></section></li><li><section class="vp-sidebar-group"><p class="vp-sidebar-header clickable"><!----><a class="route-link auto-link vp-sidebar-title no-external-link-icon" href="/HTML_CSS/HTML/HTML01.html" aria-label="HTML&amp;CSS"><!---->HTML&amp;CSS<!----></a><!----></p><ul class="vp-sidebar-links"><li><section class="vp-sidebar-group"><p class="vp-sidebar-header clickable"><!----><a class="route-link auto-link vp-sidebar-title no-external-link-icon" href="/HTML_CSS/HTML/HTML01.html" aria-label="HTML"><!---->HTML<!----></a><!----></p><ul class="vp-sidebar-links"><li><a class="route-link auto-link vp-sidebar-link" href="/HTML_CSS/HTML/HTML01.html" aria-label="文档声明（DOCTYPE）"><!---->文档声明（DOCTYPE）<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/HTML_CSS/HTML/HTML02.html" aria-label="HTML 语义化元素"><!---->HTML 语义化元素<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/HTML_CSS/HTML/HTML03.html" aria-label="SEO（Search engine optimization）"><!---->SEO（Search engine optimization）<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/HTML_CSS/HTML/HTML04.html" aria-label="iframe 介绍"><!---->iframe 介绍<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/HTML_CSS/HTML/HTML05.html" aria-label="页面可见性 API"><!---->页面可见性 API<!----></a></li></ul></section></li><li><section class="vp-sidebar-group"><p class="vp-sidebar-header clickable"><!----><a class="route-link auto-link vp-sidebar-title no-external-link-icon" href="/HTML_CSS/CSS/CSS01.html" aria-label="CSS"><!---->CSS<!----></a><!----></p><ul class="vp-sidebar-links"><li><a class="route-link auto-link vp-sidebar-link" href="/HTML_CSS/CSS/CSS01.html" aria-label="CSS 单位总结"><!---->CSS 单位总结<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/HTML_CSS/CSS/CSS02.html" aria-label="弹性盒布局"><!---->弹性盒布局<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/HTML_CSS/CSS/CSS03.html" aria-label="网格布局"><!---->网格布局<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/HTML_CSS/CSS/CSS04.html" aria-label="居中方式总结"><!---->居中方式总结<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/HTML_CSS/CSS/CSS05.html" aria-label="隐藏元素的方式总结"><!---->隐藏元素的方式总结<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/HTML&amp;CSS/CSS/CSS06.html" aria-label="/HTML&amp;CSS/CSS/CSS06.html"><!---->/HTML&amp;CSS/CSS/CSS06.html<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/HTML&amp;CSS/CSS/CSS07.html" aria-label="/HTML&amp;CSS/CSS/CSS07.html"><!---->/HTML&amp;CSS/CSS/CSS07.html<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/HTML&amp;CSS/CSS/CSS08.html" aria-label="/HTML&amp;CSS/CSS/CSS08.html"><!---->/HTML&amp;CSS/CSS/CSS08.html<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/HTML&amp;CSS/CSS/CSS09.html" aria-label="/HTML&amp;CSS/CSS/CSS09.html"><!---->/HTML&amp;CSS/CSS/CSS09.html<!----></a></li></ul></section></li></ul></section></li><li><section class="vp-sidebar-group"><p class="vp-sidebar-header clickable"><!----><a class="route-link auto-link vp-sidebar-title no-external-link-icon" href="/JavaScript/JavaScript01.html" aria-label="JavaScript"><!---->JavaScript<!----></a><!----></p><ul class="vp-sidebar-links"><li><a class="route-link auto-link vp-sidebar-link" href="/JavaScript/JavaScript01.html" aria-label="作用域和作用域链"><!---->作用域和作用域链<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/JavaScript/JavaScript02.html" aria-label="闭包"><!---->闭包<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/JavaScript/JavaScript03.html" aria-label="this关键字"><!---->this关键字<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/JavaScript/JavaScript04.html" aria-label="面向对象编程和函数式编程"><!---->面向对象编程和函数式编程<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/JavaScript/JavaScript05.html" aria-label="原型和原型链"><!---->原型和原型链<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/JavaScript/JavaScript06.html" aria-label="Promise"><!---->Promise<!----></a></li></ul></section></li><li><section class="vp-sidebar-group"><p class="vp-sidebar-header clickable active"><!----><a class="route-link auto-link vp-sidebar-title no-external-link-icon" href="/Vue/Vue01.html" aria-label="Vue"><!---->Vue<!----></a><!----></p><ul class="vp-sidebar-links"><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue01.html" aria-label="模板语法"><!---->模板语法<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue02.html" aria-label="响应式基础"><!---->响应式基础<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue03.html" aria-label="响应式相关API"><!---->响应式相关API<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue04.html" aria-label="计算属性"><!---->计算属性<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue05.html" aria-label="类与样式绑定"><!---->类与样式绑定<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue07.html" aria-label="条件与列表渲染"><!---->条件与列表渲染<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue09.html" aria-label="表单处理"><!---->表单处理<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue10.html" aria-label="生命周期"><!---->生命周期<!----></a></li><li><a class="route-link route-link-active auto-link vp-sidebar-link active" href="/Vue/Vue11.html" aria-label="侦听器"><!---->侦听器<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue12.html" aria-label="组件介绍"><!---->组件介绍<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue13.html" aria-label="Props"><!---->Props<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue14.html" aria-label="自定义事件"><!---->自定义事件<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue15.html" aria-label="组件v-model"><!---->组件v-model<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue16.html" aria-label="组件插槽"><!---->组件插槽<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue17.html" aria-label="前端路由"><!---->前端路由<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue18.html" aria-label="KeepAlive内置组件"><!---->KeepAlive内置组件<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue19.html" aria-label="状态管理库"><!---->状态管理库<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue20.html" aria-label="组件库介绍"><!---->组件库介绍<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue21.html" aria-label="虚拟DOM本质"><!---->虚拟DOM本质<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue22.html" aria-label="模板的本质"><!---->模板的本质<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue23.html" aria-label="组件树和虚拟DOM树"><!---->组件树和虚拟DOM树<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue24.html" aria-label="数据拦截的本质"><!---->数据拦截的本质<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue25.html" aria-label="响应式数据的本质"><!---->响应式数据的本质<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue26.html" aria-label="响应式的本质"><!---->响应式的本质<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue27.html" aria-label="响应式和组件渲染"><!---->响应式和组件渲染<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue28.html" aria-label="实现响应式系统"><!---->实现响应式系统<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue29.html" aria-label="图解Effect"><!---->图解Effect<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue30.html" aria-label="手写computed"><!---->手写computed<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue31.html" aria-label="指令的本质"><!---->指令的本质<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue32.html" aria-label="插槽的本质"><!---->插槽的本质<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue33.html" aria-label="v-model的本质"><!---->v-model的本质<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue34.html" aria-label="setup标签写法"><!---->setup标签写法<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue35.html" aria-label="组件生命周期"><!---->组件生命周期<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue36.html" aria-label="keep-alive组件生命周期"><!---->keep-alive组件生命周期<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue37.html" aria-label="keep-alive组件本质"><!---->keep-alive组件本质<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue38.html" aria-label="key的本质"><!---->key的本质<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue39.html" aria-label="属性透传"><!---->属性透传<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue40.html" aria-label="依赖注入"><!---->依赖注入<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue41.html" aria-label="组合式函数"><!---->组合式函数<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/Vue/Vue42.html" aria-label="自定义指令"><!---->自定义指令<!----></a></li></ul></section></li><li><section class="vp-sidebar-group"><p class="vp-sidebar-header clickable"><!----><a class="route-link auto-link vp-sidebar-title no-external-link-icon" href="/React/React01.html" aria-label="React"><!---->React<!----></a><!----></p><ul class="vp-sidebar-links"><li><a class="route-link auto-link vp-sidebar-link" href="/React/React01.html" aria-label="react01"><!---->react01<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/React/React02.html" aria-label="huyho"><!---->huyho<!----></a></li></ul></section></li></ul><!----></aside><!--[--><main id="main-content" class="vp-page"><!--[--><!----><!----><nav class="vp-breadcrumb disable"></nav><div class="vp-page-title"><h1><!---->侦听器</h1><div class="page-info"><!----><!----><!----><!----><span class="page-reading-time-info" aria-label="阅读时间⌛" data-balloon-pos="up"><svg xmlns="http://www.w3.org/2000/svg" class="icon timer-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="timer icon" name="timer"><path d="M799.387 122.15c4.402-2.978 7.38-7.897 7.38-13.463v-1.165c0-8.933-7.38-16.312-16.312-16.312H256.33c-8.933 0-16.311 7.38-16.311 16.312v1.165c0 5.825 2.977 10.874 7.637 13.592 4.143 194.44 97.22 354.963 220.201 392.763-122.204 37.542-214.893 196.511-220.2 389.397-4.661 5.049-7.638 11.651-7.638 19.03v5.825h566.49v-5.825c0-7.379-2.849-13.981-7.509-18.9-5.049-193.016-97.867-351.985-220.2-389.527 123.24-37.67 216.446-198.453 220.588-392.892zM531.16 450.445v352.632c117.674 1.553 211.787 40.778 211.787 88.676H304.097c0-48.286 95.149-87.382 213.728-88.676V450.445c-93.077-3.107-167.901-81.297-167.901-177.093 0-8.803 6.99-15.793 15.793-15.793 8.803 0 15.794 6.99 15.794 15.793 0 80.261 63.69 145.635 142.01 145.635s142.011-65.374 142.011-145.635c0-8.803 6.99-15.793 15.794-15.793s15.793 6.99 15.793 15.793c0 95.019-73.789 172.82-165.96 177.093z"></path></svg><span>大约 8 分钟</span><meta property="timeRequired" content="PT8M"></span><!----><!----></div><hr></div><div class="vp-toc-placeholder"><aside id="toc" vp-toc><!----><div class="vp-toc-header">此页内容<button type="button" class="print-button" title="打印"><svg xmlns="http://www.w3.org/2000/svg" class="icon print-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="print icon" name="print"><path d="M819.2 364.8h-44.8V128c0-17.067-14.933-32-32-32H281.6c-17.067 0-32 14.933-32 32v236.8h-44.8C145.067 364.8 96 413.867 96 473.6v192c0 59.733 49.067 108.8 108.8 108.8h44.8V896c0 17.067 14.933 32 32 32h460.8c17.067 0 32-14.933 32-32V774.4h44.8c59.733 0 108.8-49.067 108.8-108.8v-192c0-59.733-49.067-108.8-108.8-108.8zM313.6 160h396.8v204.8H313.6V160zm396.8 704H313.6V620.8h396.8V864zM864 665.6c0 25.6-19.2 44.8-44.8 44.8h-44.8V588.8c0-17.067-14.933-32-32-32H281.6c-17.067 0-32 14.933-32 32v121.6h-44.8c-25.6 0-44.8-19.2-44.8-44.8v-192c0-25.6 19.2-44.8 44.8-44.8h614.4c25.6 0 44.8 19.2 44.8 44.8v192z"></path></svg></button><div class="arrow end"></div></div><div class="vp-toc-wrapper"><ul class="vp-toc-list"><!--[--><li class="vp-toc-item"><a class="route-link vp-toc-link level2" href="#快速入门">快速入门</a></li><!----><!--]--><!--[--><li class="vp-toc-item"><a class="route-link vp-toc-link level2" href="#各种细节">各种细节</a></li><li><ul class="vp-toc-list"><!--[--><li class="vp-toc-item"><a class="route-link vp-toc-link level3" href="#_1-侦听的数据源类型">1. 侦听的数据源类型</a></li><!----><!--]--><!--[--><li class="vp-toc-item"><a class="route-link vp-toc-link level3" href="#_2-侦听层次">2. 侦听层次</a></li><!----><!--]--><!--[--><li class="vp-toc-item"><a class="route-link vp-toc-link level3" href="#_3-第三个参数">3. 第三个参数</a></li><!----><!--]--></ul></li><!--]--><!--[--><li class="vp-toc-item"><a class="route-link vp-toc-link level2" href="#watcheffect">watchEffect</a></li><!----><!--]--><!--[--><li class="vp-toc-item"><a class="route-link vp-toc-link level2" href="#回调触发的时机">回调触发的时机</a></li><!----><!--]--><!--[--><li class="vp-toc-item"><a class="route-link vp-toc-link level2" href="#停止侦听器">停止侦听器</a></li><!----><!--]--></ul><div class="vp-toc-marker" style="top:-1.7rem;"></div></div><!----></aside></div><!----><div class="theme-hope-content" vp-content><h1 id="侦听器" tabindex="-1"><a class="header-anchor" href="#侦听器"><span>侦听器</span></a></h1><p>侦听器和计算属性类似，都是依赖响应式数据。不过计算属性是在依赖的数据发生变化的时候，重新做二次计算，不会涉及到副作用的操作。而侦听器则刚好相反，在依赖的数据发生变化的时候，允许做一些副作用的操作，例如更改 DOM、发送异步请求...</p><h2 id="快速入门" tabindex="-1"><a class="header-anchor" href="#快速入门"><span><strong>快速入门</strong></span></a></h2><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>&lt;template&gt;</span></span>
+<span class="line"><span>  &lt;div&gt;</span></span>
+<span class="line"><span>    &lt;h1&gt;智能机器人&lt;/h1&gt;</span></span>
+<span class="line"><span>    &lt;div&gt;</span></span>
+<span class="line"><span>      &lt;input v-model=&quot;question&quot; placeholder=&quot;请输入问题&quot; /&gt;</span></span>
+<span class="line"><span>    &lt;/div&gt;</span></span>
+<span class="line"><span>    &lt;div v-if=&quot;loading&quot;&gt;正在加载中...&lt;/div&gt;</span></span>
+<span class="line"><span>    &lt;div v-else&gt;{{ answer }}&lt;/div&gt;</span></span>
+<span class="line"><span>  &lt;/div&gt;</span></span>
+<span class="line"><span>&lt;/template&gt;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&lt;script setup&gt;</span></span>
+<span class="line"><span>import { ref, watch } from &#39;vue&#39;</span></span>
+<span class="line"><span>const question = ref(&#39;&#39;) // 存储用户输入的问题，以 ？ 结束</span></span>
+<span class="line"><span>const answer = ref(&#39;&#39;) // 存储机器人的回答</span></span>
+<span class="line"><span>const loading = ref(false) // 是否正在加载中</span></span>
+<span class="line"><span>// 侦听器所对应的回调函数，接收两个参数</span></span>
+<span class="line"><span>// 一个是依赖数据的新值，一个是依赖数据的旧值</span></span>
+<span class="line"><span>watch(question, async (newValue) =&gt; {</span></span>
+<span class="line"><span>  if (newValue.includes(&#39;?&#39;)) {</span></span>
+<span class="line"><span>    loading.value = true</span></span>
+<span class="line"><span>    answer.value = &#39;思考中....&#39;</span></span>
+<span class="line"><span>    try {</span></span>
+<span class="line"><span>      const res = await fetch(&#39;https://yesno.wtf/api&#39;)</span></span>
+<span class="line"><span>      const result = await res.json()</span></span>
+<span class="line"><span>      answer.value = result.answer</span></span>
+<span class="line"><span>    } catch (err) {</span></span>
+<span class="line"><span>      answer.value = &#39;抱歉，我无法回答您的问题&#39;</span></span>
+<span class="line"><span>    } finally {</span></span>
+<span class="line"><span>      loading.value = false</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>})</span></span>
+<span class="line"><span>&lt;/script&gt;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&lt;style scoped&gt;&lt;/style&gt;</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在上面的示例中，watch 就是一个侦听器，侦听 question 这个 ref 状态的变化，每次当 ref 状态发生变化的时候，就会重新执行后面的回调函数，回调函数接收两个参数：</p><ul><li>新的状态值</li><li>旧的状态值</li></ul><p>并且在回调函数中，支持副作用操作。</p><h2 id="各种细节" tabindex="-1"><a class="header-anchor" href="#各种细节"><span><strong>各种细节</strong></span></a></h2><h3 id="_1-侦听的数据源类型" tabindex="-1"><a class="header-anchor" href="#_1-侦听的数据源类型"><span><strong>1. 侦听的数据源类型</strong></span></a></h3><p>除了上面快速入门中演示的侦听 ref 类型的数据以外，还支持侦听一些其他类型的数据。</p><p><strong>计算属性</strong></p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>&lt;template&gt;</span></span>
+<span class="line"><span>  &lt;div&gt;</span></span>
+<span class="line"><span>    &lt;input type=&quot;text&quot; v-model=&quot;firstName&quot; placeholder=&quot;first name&quot; /&gt;</span></span>
+<span class="line"><span>    &lt;input type=&quot;text&quot; v-model=&quot;lastName&quot; placeholder=&quot;last name&quot; /&gt;</span></span>
+<span class="line"><span>    &lt;p&gt;全名：{{ fullName }}&lt;/p&gt;</span></span>
+<span class="line"><span>  &lt;/div&gt;</span></span>
+<span class="line"><span>&lt;/template&gt;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&lt;script setup&gt;</span></span>
+<span class="line"><span>import { ref, computed, watch } from &#39;vue&#39;</span></span>
+<span class="line"><span>const firstName = ref(&#39;John&#39;)</span></span>
+<span class="line"><span>const lastName = ref(&#39;Doe&#39;)</span></span>
+<span class="line"><span>const fullName = computed(() =&gt; `${firstName.value} ${lastName.value}`)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 设置侦听器</span></span>
+<span class="line"><span>watch(fullName, (newVal, oldVal) =&gt; {</span></span>
+<span class="line"><span>  console.log(`new: ${newVal}, old: ${oldVal}`)</span></span>
+<span class="line"><span>})</span></span>
+<span class="line"><span>&lt;/script&gt;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&lt;style scoped&gt;&lt;/style&gt;</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>reactive响应式对象</strong></p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>&lt;template&gt;</span></span>
+<span class="line"><span>  &lt;div&gt;</span></span>
+<span class="line"><span>    &lt;input type=&quot;text&quot; v-model=&quot;user.name&quot; placeholder=&quot;name&quot; /&gt;</span></span>
+<span class="line"><span>    &lt;input type=&quot;text&quot; v-model=&quot;user.age&quot; placeholder=&quot;age&quot; /&gt;</span></span>
+<span class="line"><span>    &lt;p&gt;用户信息：{{ user.name }} - {{ user.age }}&lt;/p&gt;</span></span>
+<span class="line"><span>  &lt;/div&gt;</span></span>
+<span class="line"><span>&lt;/template&gt;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&lt;script setup&gt;</span></span>
+<span class="line"><span>import { reactive, watch } from &#39;vue&#39;</span></span>
+<span class="line"><span>const user = reactive({</span></span>
+<span class="line"><span>  name: &#39;John&#39;,</span></span>
+<span class="line"><span>  age: 18</span></span>
+<span class="line"><span>})</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 设置侦听器</span></span>
+<span class="line"><span>watch(user, () =&gt; {</span></span>
+<span class="line"><span>  console.log(&#39;触发了侦听器回调函数&#39;)</span></span>
+<span class="line"><span>})</span></span>
+<span class="line"><span>&lt;/script&gt;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&lt;style scoped&gt;&lt;/style&gt;</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>Getter函数</strong></p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>&lt;template&gt;</span></span>
+<span class="line"><span>  &lt;div&gt;</span></span>
+<span class="line"><span>    &lt;input type=&quot;number&quot; v-model=&quot;count&quot; /&gt;</span></span>
+<span class="line"><span>    &lt;p&gt;是否为偶数？{{ isEven() }}&lt;/p&gt;</span></span>
+<span class="line"><span>    &lt;div&gt;count2: {{ count2 }}&lt;/div&gt;</span></span>
+<span class="line"><span>    &lt;button @click=&quot;count2++&quot;&gt;+1&lt;/button&gt;</span></span>
+<span class="line"><span>  &lt;/div&gt;</span></span>
+<span class="line"><span>&lt;/template&gt;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&lt;script setup&gt;</span></span>
+<span class="line"><span>import { ref, watch } from &#39;vue&#39;</span></span>
+<span class="line"><span>const count = ref(0)</span></span>
+<span class="line"><span>const count2 = ref(0)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 注意这个函数本身，是每次重新渲染的时候都会重新执行的</span></span>
+<span class="line"><span>function isEven() {</span></span>
+<span class="line"><span>  console.log(&#39;isEvent 函数被重新执行了&#39;)</span></span>
+<span class="line"><span>  if (count2.value === 5) {</span></span>
+<span class="line"><span>    return &#39;this is a test&#39;</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>  return count.value % 2 === 0</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>// 设置侦听器</span></span>
+<span class="line"><span>// 这里侦听的是函数的返回值结果</span></span>
+<span class="line"><span>// 如果函数返回值发生变化，就会触发侦听器回调函数</span></span>
+<span class="line"><span>watch(isEven, () =&gt; {</span></span>
+<span class="line"><span>  console.log(&#39;触发了侦听器回调函数&#39;)</span></span>
+<span class="line"><span>})</span></span>
+<span class="line"><span>&lt;/script&gt;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&lt;style scoped&gt;&lt;/style&gt;</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>多个数据源所组成的数组</strong></p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>&lt;template&gt;</span></span>
+<span class="line"><span>  &lt;div&gt;</span></span>
+<span class="line"><span>    &lt;div&gt;</span></span>
+<span class="line"><span>      &lt;input type=&quot;text&quot; v-model=&quot;title&quot; /&gt;</span></span>
+<span class="line"><span>    &lt;/div&gt;</span></span>
+<span class="line"><span>    &lt;div&gt;</span></span>
+<span class="line"><span>      &lt;textarea v-model=&quot;description&quot; cols=&quot;30&quot; rows=&quot;10&quot;&gt;&lt;/textarea&gt;</span></span>
+<span class="line"><span>    &lt;/div&gt;</span></span>
+<span class="line"><span>  &lt;/div&gt;</span></span>
+<span class="line"><span>&lt;/template&gt;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&lt;script setup&gt;</span></span>
+<span class="line"><span>import { ref, watch } from &#39;vue&#39;</span></span>
+<span class="line"><span>const title = ref(&#39;&#39;)</span></span>
+<span class="line"><span>const description = ref(&#39;&#39;)</span></span>
+<span class="line"><span>// 这里侦听的是多个数据源所组成的数组</span></span>
+<span class="line"><span>// 数组里面任何一个数据发生变化，都会触发回调函数</span></span>
+<span class="line"><span>watch([title, description], () =&gt; {</span></span>
+<span class="line"><span>  console.log(&#39;侦听器的回调函数执行了&#39;)</span></span>
+<span class="line"><span>})</span></span>
+<span class="line"><span>&lt;/script&gt;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&lt;style scoped&gt;&lt;/style&gt;</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="_2-侦听层次" tabindex="-1"><a class="header-anchor" href="#_2-侦听层次"><span><strong>2. 侦听层次</strong></span></a></h3><p>这个主要是针对 reactive 响应式对象，当侦听的数据源是 reactvie 类型数据的时候，默认是深层次侦听，这意味着哪怕是嵌套的属性值发生变化，侦听器的回调函数也会重新执行。</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>&lt;template&gt;</span></span>
+<span class="line"><span>  &lt;div&gt;</span></span>
+<span class="line"><span>    &lt;h1&gt;任务列表&lt;/h1&gt;</span></span>
+<span class="line"><span>    &lt;ul&gt;</span></span>
+<span class="line"><span>      &lt;li v-for=&quot;task in tasks.list&quot; :key=&quot;task.id&quot;&gt;</span></span>
+<span class="line"><span>        {{ task.title }} - {{ task.completed ? &#39;已完成&#39; : &#39;未完成&#39; }}</span></span>
+<span class="line"><span>        &lt;button @click=&quot;task.completed = !task.completed&quot;&gt;切换状态&lt;/button&gt;</span></span>
+<span class="line"><span>      &lt;/li&gt;</span></span>
+<span class="line"><span>    &lt;/ul&gt;</span></span>
+<span class="line"><span>  &lt;/div&gt;</span></span>
+<span class="line"><span>&lt;/template&gt;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&lt;script setup&gt;</span></span>
+<span class="line"><span>import { reactive, watch } from &#39;vue&#39;</span></span>
+<span class="line"><span>const tasks = reactive({</span></span>
+<span class="line"><span>  list: [</span></span>
+<span class="line"><span>    { id: 1, title: &#39;Task 1&#39;, completed: false },</span></span>
+<span class="line"><span>    { id: 2, title: &#39;Task 2&#39;, completed: true }</span></span>
+<span class="line"><span>  ]</span></span>
+<span class="line"><span>})</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>watch(tasks, () =&gt; {</span></span>
+<span class="line"><span>  console.log(&#39;侦听器触发了！&#39;)</span></span>
+<span class="line"><span>})</span></span>
+<span class="line"><span>&lt;/script&gt;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&lt;style scoped&gt;&lt;/style&gt;</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>通过上面的例子，我们可以看出，当侦听的是 reactive 类型的响应式对象时，是深层次侦听的。</p><p>虽然上面的这个深层次侦听的特性非常的方便，但是当用于大型数据结构的时候，开销也是很大的，因此一定要留意性能，只在必要的时候再使用。</p><p>另外补充一个点，当侦听的是 reactive 对象的时候，不能直接侦听响应式对象的属性值：</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>const obj = reactive({ count: 0 })</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 错误，因为 watch() 得到的参数是一个 number</span></span>
+<span class="line"><span>watch(obj.count, (count) =&gt; {</span></span>
+<span class="line"><span>  console.log(`count is: ${count}`)</span></span>
+<span class="line"><span>})</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>可以将上面的例子修改为一个 Getter 函数：</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>const obj = reactive({ count: 0 })</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>watch(()=&gt;obj.count, (count) =&gt; {</span></span>
+<span class="line"><span>  console.log(`count is: ${count}`)</span></span>
+<span class="line"><span>})</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="_3-第三个参数" tabindex="-1"><a class="header-anchor" href="#_3-第三个参数"><span><strong>3. 第三个参数</strong></span></a></h3><ul><li>第一个参数：侦听的数据源</li><li>第二个参数：数据发生变化时要执行的回调函数</li><li>第三个参数：选项对象 <ul><li>immediate：true/false <ul><li>默认情况下，watch 对应的回调函数是懒执行的，只有在依赖的数据发生变化时，才会执行回调。</li><li>但是在某些场景中，我们可能期望立即执行一次，例如请求一些初始化数据，这个时候就可以设置该配置项</li></ul></li><li>once：true/false <ul><li>侦听器的回调函数只执行一次</li></ul></li><li>deep：true/false <ul><li>强制转换为深层次侦听器</li><li>什么时候会用到呢？有些时候使用 watch 来侦听一个由计算属性或者 getter 函数返回的对象的时候，默认就不是深层次的侦听</li><li>通过设置 deep 可以让这种情况下的对象侦听，也变成深层次的侦听</li></ul></li></ul></li></ul><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>&lt;template&gt;</span></span>
+<span class="line"><span>  &lt;div&gt;</span></span>
+<span class="line"><span>    &lt;div v-for=&quot;task in tasks&quot; :key=&quot;task.id&quot; @click=&quot;selectTask(task)&quot;&gt;</span></span>
+<span class="line"><span>      {{ task.title }} ({{ task.completed ? &#39;Completed&#39; : &#39;Pending&#39; }})</span></span>
+<span class="line"><span>    &lt;/div&gt;</span></span>
+<span class="line"><span>    &lt;hr /&gt;</span></span>
+<span class="line"><span>    &lt;div v-if=&quot;selectedTask&quot;&gt;</span></span>
+<span class="line"><span>      &lt;h3&gt;Edit Task&lt;/h3&gt;</span></span>
+<span class="line"><span>      &lt;input v-model=&quot;selectedTask.title&quot; placeholder=&quot;Edit title&quot; /&gt;</span></span>
+<span class="line"><span>      &lt;label&gt;</span></span>
+<span class="line"><span>        &lt;input type=&quot;checkbox&quot; v-model=&quot;selectedTask.completed&quot; /&gt;</span></span>
+<span class="line"><span>        Completed</span></span>
+<span class="line"><span>      &lt;/label&gt;</span></span>
+<span class="line"><span>    &lt;/div&gt;</span></span>
+<span class="line"><span>  &lt;/div&gt;</span></span>
+<span class="line"><span>&lt;/template&gt;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&lt;script setup&gt;</span></span>
+<span class="line"><span>import { reactive, computed, watch } from &#39;vue&#39;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>const tasks = reactive([</span></span>
+<span class="line"><span>  { id: 1, title: &#39;Learn Vue&#39;, completed: false },</span></span>
+<span class="line"><span>  { id: 2, title: &#39;Read Documentation&#39;, completed: false },</span></span>
+<span class="line"><span>  { id: 3, title: &#39;Build Something Awesome&#39;, completed: false }</span></span>
+<span class="line"><span>])</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>const selectedId = reactive({ id: null })</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 这是一个计算属性</span></span>
+<span class="line"><span>const selectedTask = computed(() =&gt; {</span></span>
+<span class="line"><span>  return tasks.find((task) =&gt; task.id === selectedId.id)</span></span>
+<span class="line"><span>})</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 侦听的是一个 Getter 函数</span></span>
+<span class="line"><span>// 该 Getter 函数返回计算属性的值</span></span>
+<span class="line"><span>watch(</span></span>
+<span class="line"><span>  () =&gt; selectedTask.value,</span></span>
+<span class="line"><span>  () =&gt; {</span></span>
+<span class="line"><span>    console.log(&#39;Task details changed&#39;)</span></span>
+<span class="line"><span>  },</span></span>
+<span class="line"><span>  { deep: true }</span></span>
+<span class="line"><span>)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>function selectTask(task) {</span></span>
+<span class="line"><span>  selectedId.id = task.id</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>&lt;/script&gt;</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="watcheffect" tabindex="-1"><a class="header-anchor" href="#watcheffect"><span><strong>watchEffect</strong></span></a></h2><p>watchEffect 相比 watch 而言，能够自动跟踪回调里面的响应式依赖，对比如下：</p><p>watch</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>const todoId = ref(1)</span></span>
+<span class="line"><span>const data = ref(null)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>watch(</span></span>
+<span class="line"><span>  todoId, // 第一个参数需要显式的指定响应式依赖</span></span>
+<span class="line"><span>  async () =&gt; {</span></span>
+<span class="line"><span>    const response = await fetch(</span></span>
+<span class="line"><span>      `https://jsonplaceholder.typicode.com/todos/${todoId.value}`</span></span>
+<span class="line"><span>    )</span></span>
+<span class="line"><span>    data.value = await response.json()</span></span>
+<span class="line"><span>  },</span></span>
+<span class="line"><span>  { immediate: true }</span></span>
+<span class="line"><span>)</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>watchEffect</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>// 不再需要显式的指定响应式数据依赖</span></span>
+<span class="line"><span>// 在回调函数中用到了哪个响应式数据，该数据就会成为一个依赖</span></span>
+<span class="line"><span>watchEffect(async () =&gt; {</span></span>
+<span class="line"><span>  const response = await fetch(</span></span>
+<span class="line"><span>    `https://jsonplaceholder.typicode.com/todos/${todoId.value}`</span></span>
+<span class="line"><span>  )</span></span>
+<span class="line"><span>  data.value = await response.json()</span></span>
+<span class="line"><span>})</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>对于只有一个依赖项的场景来讲，watchEffect 的收益不大，但是如果涉及到多个依赖项，那么 watchEffect 的好处就体现出来了。</p><p>watchEffect 相比 watch 还有一个特点：如果你需要侦听一个嵌套的数据结构的几个属性，那么 watchEffect 只会侦听回调中用到的属性，而不是递归侦听所有的属性。</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>&lt;template&gt;</span></span>
+<span class="line"><span>  &lt;div&gt;</span></span>
+<span class="line"><span>    &lt;h1&gt;团队管理&lt;/h1&gt;</span></span>
+<span class="line"><span>    &lt;ul&gt;</span></span>
+<span class="line"><span>      &lt;li v-for=&quot;member in team.members&quot; :key=&quot;member.id&quot;&gt;</span></span>
+<span class="line"><span>        {{ member.name }} - {{ member.role }} - {{ member.status }}</span></span>
+<span class="line"><span>      &lt;/li&gt;</span></span>
+<span class="line"><span>    &lt;/ul&gt;</span></span>
+<span class="line"><span>    &lt;button @click=&quot;updateLeaderStatus&quot;&gt;切换领导的状态&lt;/button&gt;</span></span>
+<span class="line"><span>    &lt;button @click=&quot;updateMemberStatus&quot;&gt;切换成员的状态&lt;/button&gt;</span></span>
+<span class="line"><span>  &lt;/div&gt;</span></span>
+<span class="line"><span>&lt;/template&gt;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&lt;script setup&gt;</span></span>
+<span class="line"><span>import { reactive, watchEffect } from &#39;vue&#39;</span></span>
+<span class="line"><span>const team = reactive({</span></span>
+<span class="line"><span>  members: [</span></span>
+<span class="line"><span>    { id: 1, name: &#39;Alice&#39;, role: &#39;Leader&#39;, status: &#39;Active&#39; },</span></span>
+<span class="line"><span>    { id: 2, name: &#39;Bob&#39;, role: &#39;Member&#39;, status: &#39;Inactive&#39; }</span></span>
+<span class="line"><span>  ]</span></span>
+<span class="line"><span>})</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 有两个方法，分别是对 Leader 和 Member 进行状态修改</span></span>
+<span class="line"><span>function updateLeaderStatus() {</span></span>
+<span class="line"><span>  const leader = team.members.find((me) =&gt; me.role === &#39;Leader&#39;)</span></span>
+<span class="line"><span>  // 切换状态</span></span>
+<span class="line"><span>  leader.status = leader.status === &#39;Active&#39; ? &#39;Inactive&#39; : &#39;Active&#39;</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>function updateMemberStatus() {</span></span>
+<span class="line"><span>  const member = team.members.find((member) =&gt; member.role === &#39;Member&#39;)</span></span>
+<span class="line"><span>  member.status = member.status === &#39;Active&#39; ? &#39;Inactive&#39; : &#39;Active&#39;</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 添加一个侦听器</span></span>
+<span class="line"><span>watchEffect(() =&gt; {</span></span>
+<span class="line"><span>  // 获取到 leader</span></span>
+<span class="line"><span>  const leader = team.members.find((me) =&gt; me.role === &#39;Leader&#39;)</span></span>
+<span class="line"><span>  // 输出 leader 当前的状态</span></span>
+<span class="line"><span>  console.log(&#39;Leader状态:&#39;, leader.status)</span></span>
+<span class="line"><span>})</span></span>
+<span class="line"><span>&lt;/script&gt;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&lt;style scoped&gt;&lt;/style&gt;</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="回调触发的时机" tabindex="-1"><a class="header-anchor" href="#回调触发的时机"><span><strong>回调触发的时机</strong></span></a></h2><p>默认情况下，侦听器回调的执行时机在父组件更新 <strong>之后</strong>，所属组件的 DOM 更新 <strong>之前</strong> 被调用。这意味着如果你尝试在回调函数中访问所属组件的 DOM，拿到的是 DOM 更新之前的状态。</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>&lt;template&gt;</span></span>
+<span class="line"><span>  &lt;div&gt;</span></span>
+<span class="line"><span>    &lt;button @click=&quot;isShow = !isShow&quot;&gt;显示/隐藏&lt;/button&gt;</span></span>
+<span class="line"><span>    &lt;div v-if=&quot;isShow&quot; ref=&quot;divRef&quot;&gt;</span></span>
+<span class="line"><span>      &lt;p&gt;this is a test&lt;/p&gt;</span></span>
+<span class="line"><span>    &lt;/div&gt;</span></span>
+<span class="line"><span>    &lt;p&gt;上面的高度为：{{ height }} pixels&lt;/p&gt;</span></span>
+<span class="line"><span>  &lt;/div&gt;</span></span>
+<span class="line"><span>&lt;/template&gt;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&lt;script setup&gt;</span></span>
+<span class="line"><span>import { ref, watch } from &#39;vue&#39;</span></span>
+<span class="line"><span>const isShow = ref(false)</span></span>
+<span class="line"><span>const height = ref(0) // 存储高度</span></span>
+<span class="line"><span>const divRef = ref(null) // 获取元素</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>watch(isShow, () =&gt; {</span></span>
+<span class="line"><span>  // 获取高度，将高度值给 height</span></span>
+<span class="line"><span>  height.value = divRef.value ? divRef.value.offsetHeight : 0</span></span>
+<span class="line"><span>  console.log(`当前获取的高度为：${height.value}`)</span></span>
+<span class="line"><span>})</span></span>
+<span class="line"><span>&lt;/script&gt;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&lt;style scoped&gt;&lt;/style&gt;</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如果我们期望侦听器的回调在 DOM 更新之后再被调用，那么可以将第三个参数 flush 设置为 post 即可，如下：</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>watch(</span></span>
+<span class="line"><span>  isShow,</span></span>
+<span class="line"><span>  () =&gt; {</span></span>
+<span class="line"><span>    // 获取高度，将高度值给 height</span></span>
+<span class="line"><span>    height.value = divRef.value ? divRef.value.offsetHeight : 0</span></span>
+<span class="line"><span>    console.log(`当前获取的高度为：${height.value}`)</span></span>
+<span class="line"><span>  },</span></span>
+<span class="line"><span>  {</span></span>
+<span class="line"><span>    flush: &#39;post&#39;</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>)</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="停止侦听器" tabindex="-1"><a class="header-anchor" href="#停止侦听器"><span><strong>停止侦听器</strong></span></a></h2><p>大多数情况下你是不需要关心如何停止侦听器，组件上面所设置的侦听器会在组件被卸载的时候自动停止。</p><p>但是上面所说的自动停止仅限于同步设置侦听器的情况，如果是异步设置的侦听器，那么组件被销毁也不会自动停止：</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>&lt;script setup&gt;</span></span>
+<span class="line"><span>import { watchEffect } from &#39;vue&#39;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 它会自动停止</span></span>
+<span class="line"><span>watchEffect(() =&gt; {})</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// ...这个则不会！</span></span>
+<span class="line"><span>setTimeout(() =&gt; {</span></span>
+<span class="line"><span>  watchEffect(() =&gt; {})</span></span>
+<span class="line"><span>}, 100)</span></span>
+<span class="line"><span>&lt;/script&gt;</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这种情况下，就需要手动的去停止侦听器。</p><p>要手动的停止侦听器，就和 setTimeout 或者 setInterval 类似，调用一下返回的函数即可。</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>const unwatch = watchEffect(() =&gt; {})</span></span>
+<span class="line"><span>// 手动停止</span></span>
+<span class="line"><span>unwatch();</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>下面是一个具体的示例：</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>&lt;template&gt;</span></span>
+<span class="line"><span>  &lt;div&gt;</span></span>
+<span class="line"><span>    &lt;button @click=&quot;a++&quot;&gt;+1&lt;/button&gt;</span></span>
+<span class="line"><span>    &lt;p&gt;当前 a 的值为：{{ a }}&lt;/p&gt;</span></span>
+<span class="line"><span>    &lt;p&gt;{{ message }}&lt;/p&gt;</span></span>
+<span class="line"><span>  &lt;/div&gt;</span></span>
+<span class="line"><span>&lt;/template&gt;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&lt;script setup&gt;</span></span>
+<span class="line"><span>import { ref, watch } from &#39;vue&#39;</span></span>
+<span class="line"><span>const a = ref(1) // 计数器</span></span>
+<span class="line"><span>const message = ref(&#39;&#39;) // 消息</span></span>
+<span class="line"><span>// 假设我们期望 a 的值到达一定的值之后，停止侦听</span></span>
+<span class="line"><span>const unwatch = watch(</span></span>
+<span class="line"><span>  a,</span></span>
+<span class="line"><span>  (newVal) =&gt; {</span></span>
+<span class="line"><span>    // 当值大于 5 的时候，停止侦听</span></span>
+<span class="line"><span>    if (newVal &gt; 5) {</span></span>
+<span class="line"><span>      unwatch()</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>    message.value = `当前 a 的值为：${a.value}`</span></span>
+<span class="line"><span>  },</span></span>
+<span class="line"><span>  { immediate: true }</span></span>
+<span class="line"><span>)</span></span>
+<span class="line"><span>&lt;/script&gt;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&lt;style scoped&gt;&lt;/style&gt;</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><hr><ul><li>EOF-</li></ul></div><!----><footer class="vp-page-meta"><div class="vp-meta-item edit-link"><a class="auto-link external-link vp-meta-label" href="https://github.com/AnxinXiao?tab=repositories//edit/main/Vue/Vue11.md" aria-label="编辑此页" rel="noopener noreferrer" target="_blank"><!--[--><svg xmlns="http://www.w3.org/2000/svg" class="icon edit-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="edit icon" name="edit"><path d="M430.818 653.65a60.46 60.46 0 0 1-50.96-93.281l71.69-114.012 7.773-10.365L816.038 80.138A60.46 60.46 0 0 1 859.225 62a60.46 60.46 0 0 1 43.186 18.138l43.186 43.186a60.46 60.46 0 0 1 0 86.373L588.879 565.55l-8.637 8.637-117.466 68.234a60.46 60.46 0 0 1-31.958 11.229z"></path><path d="M728.802 962H252.891A190.883 190.883 0 0 1 62.008 771.98V296.934a190.883 190.883 0 0 1 190.883-192.61h267.754a60.46 60.46 0 0 1 0 120.92H252.891a69.962 69.962 0 0 0-69.098 69.099V771.98a69.962 69.962 0 0 0 69.098 69.098h475.911A69.962 69.962 0 0 0 797.9 771.98V503.363a60.46 60.46 0 1 1 120.922 0V771.98A190.883 190.883 0 0 1 728.802 962z"></path></svg><!--]-->编辑此页<!----></a></div><div class="vp-meta-item git-info"><!----><!----></div></footer><nav class="vp-page-nav"><a class="route-link auto-link prev" href="/Vue/Vue10.html" aria-label="生命周期"><div class="hint"><span class="arrow start"></span>上一页</div><div class="link"><!---->生命周期</div></a><a class="route-link auto-link next" href="/Vue/Vue12.html" aria-label="组件介绍"><div class="hint">下一页<span class="arrow end"></span></div><div class="link">组件介绍<!----></div></a></nav><!----><!----><!--]--></main><!--]--><!----></div><!--]--><!--]--><!--[--><!----><!--[--><!--]--><!--]--><!--]--></div>
+    <script type="module" src="/assets/app-_9vaDOHR.js" defer></script>
+  </body>
+</html>
